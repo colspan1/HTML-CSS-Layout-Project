@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    max-width: 1200px;
+    height: 800px;
+    margin:52px auto ;
+    display: grid;
+    gap: 20px;
+    padding-inline: 16px;
+    grid-template-areas:"i1 i1 i1 i2"
+    "i3 i3 i3 i2"
+    "i3 i3 i3 i2" ;
+}
+.one{
+    grid-area: i1;
+    background-color: blue;
+}
+.two{
+    grid-area: i2;
+    background-color: rgb(217, 255, 0);
+}
+.three{
+    grid-area: i3;
+    background-color: black;
+}
+@media screen and (width<1200px) and (width>450px) {
+    main{
+
+        gap: 16px;
+    }
+}
+@media screen and (width<450px) {
+    main{
+        grid-template-areas: 
+        "i1"
+        "i1"
+        "i2"
+        "i2"
+        "i2"
+        "i2"
+        "i3"
+        "i3"
+        "i3";
+    }
+}

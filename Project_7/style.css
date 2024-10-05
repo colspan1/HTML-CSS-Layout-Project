@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main:#3F007E;
+    --used:#D9D9D9;
+}
+.container{
+    padding-left: 32px;
+    padding-block: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+
+header{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 32px;
+    
+    .box{
+        height: 40px;
+        width: 488px;
+        display: flex;
+        gap: 16px;
+    }
+
+    .bigitem{
+        width: 160px;
+        background-color: var(--main);
+    }
+    .sitem_box{
+        width: 100%;
+        gap: 8px;
+        display: flex;
+    }
+    .sitem{
+        
+        flex: 1;
+        background-color: var(--main);
+    }
+
+    .rightnav{
+        min-width: 370px;
+        height: 100%;
+        display: flex;
+        gap: 12px;
+
+        .search{
+            background-color: var(--main);
+            width: 319px;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+
+            .circle{
+                width:20px ;
+                height: 20px;
+                border-radius:100% ;
+                background-color: var(--used);
+            }
+
+            .rectangle{
+                width: 231px;
+                height: 100%;
+                background-color: var(--used);
+            }
+            .square{
+                width:20px ;
+                height: 20px;
+                background-color: var(--used);
+            }
+        }
+
+        .avatar{
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-color: var(--main);
+        }
+    }
+}
+.tags{
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x:auto ;
+    min-width: 100%;
+    scrollbar-width: none;
+
+    span{
+        min-width:79px ;
+        border-radius: 21px;
+        background-color: var(--main);
+    }
+}
+.ads_container{
+
+    position: relative;
+}
+.ads{
+    min-width: 100%;
+    height: 321px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    span{
+        border-radius: 20px;
+        min-width: 489px;
+        background-color: var(--main);
+    }
+}
+.adsicon{
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    width: 145px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    .one{
+        height: 60px;
+        width: 60px;
+        border-radius:12px ;
+        background-color: var(--used);
+    }
+    .two{
+    
+        height: 60px;
+        width: 60px;
+        border-radius:12px ;
+        background-color: var(--used);
+    }
+}
+.bigrectangle{
+    width: 285px;
+    height: 40px;
+    background-color: var(--main);
+}
+
+.card_container{
+    display: flex;
+    flex-direction: row;
+    gap:24px ;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.card{
+    min-width: 388px;
+    border-radius: 8px;
+    background-color: var(--main);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+    .top{
+        width: 170px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        gap:8px;
+        .line{
+            width: 100%;
+            height: 16px;
+            background-color: var(--used);
+        }
+
+        .line_container{
+            width: 77px;
+            display: flex;
+            height: 16px;
+            gap: 5px;
+            flex-direction: row;
+            .sline{
+                flex-grow: 1;
+                background-color: var(--used);
+            }
+            .bline{
+                flex-grow: 2;
+                background-color: var(--used);
+            }
+        }
+        .verybline{
+            width: 100%;
+            height:8px ;
+            background-color: var(--used);
+        }
+    }
+    .word_container{
+        width: 100%;
+        height: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        .bigword{
+            width: 80px;
+            background-color: var(--used);
+
+        }
+        .sword_container{
+            width:202px ;
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            .sword{
+                flex-grow: 1;
+                background-color: var(--used);
+            }
+
+        }
+    }
+
+}
+.grid_container{
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 12px;
+    scrollbar-width: none;
+
+}
+.grid{
+    background-color: var(--main);
+    min-width: 387px;
+    height: 324px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 6px;
+    gap: 6px;
+    .box{
+        background-color: var(--used);
+    }
+}
+@media screen and (width<1200px) {
+    header{
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 16px;
+    }
+    .rightnav{
+        display: flex;
+        justify-content: space-between;
+    }
+}
